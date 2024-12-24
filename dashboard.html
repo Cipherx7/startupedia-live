@@ -3,139 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/dashboard.css"> <!-- Link to your custom CSS file -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> 
+     
     <title>Startup Dashboard</title>
-    <style>
-        /* Custom CSS for card width */
-        .card {
-            width: 400px; /* Set a fixed width for the cards */
-            margin: auto; /* Center the cards */
-        }
-    </style>
 </head>
-<body>
-    <!-- Header with Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Startup Dashboard</a>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#" id="notification-icon">
-                        <i class="fas fa-bell"></i> Notifications
-                    </a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-user-circle"></i> Profile
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdown">
-                        <div class="dropdown-item" id="user-info">
-                            <strong>John Doe</strong><br>
-                            <small>johndoe@example.com</small>
-                        </div>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Edit Profile</a>
-                        <a class="dropdown-item" href="#">Sign Out</a>
-                    </div>
-                </li>
-            </ul>
+<body class="d-flex flex-column min-vh-100"> 
+    
+    <nav class="navbar navbar-expand-lg navbar-light glassy-header fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Startup Dashboard</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="notification-icon" title="Complete your profile">
+                            <i class="fas fa-bell"></i> <span class="badge bg-danger">3</span> Complete Profile
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user-circle"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                            <li id="user-info">
+                                <strong>John Doe</strong><br>
+                                <small>johndoe@example.com</small>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Edit Profile</a></li>
+                            <li><a class="dropdown-item text-danger" href="#">Sign Out</a></li> 
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <button class="btn btn-outline-dark" id="ideaValidationBtn">Idea Validation</button>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <div class="container">
+    <div class="container flex-grow-1" style="margin-top: 80px;"> 
         <h1 class="text-center my-4">Startup Dashboard</h1>
         <div class="row">
-            <!-- Startup Card 1 -->
+            
             <div class="col-md-6">
                 <div class="card mb-4">
-                    <img src="path/to/image1.jpg" class="card-img-top" alt="EduBridge">
                     <div class="card-body text-left">
                         <h2 class="card-title">EduBridge</h2>
-                        <p class="card-text"><strong>What we are solving:</strong> We are a platform to bridge the gap between the startup and students.</p>
+                        <p><strong>What we are solving:</strong></p> 
+                        <div class="border p-3 mb-3">
+                            <p>We are a platform to bridge the gap between the startup and students.</p>
+                        </div>
                         <p class="card-text"><strong>Startup Website:</strong> <a href="http://edubridge.com" target="_blank">edubridge.com</a></p>
                         <p class="card-text"><strong>Industries:</strong> EduTech</p>
                         <p class="card-text"><strong>Founder:</strong> Abhishek Pawar</p>
                         <p class="card-text"><strong>We need help in:</strong> Business Management, Website Making, Digital Marketing</p>
                         <p class="card-text"><strong>Collaboration:</strong> Unpaid</p>
-                        <button class="btn btn-primary approach-button">Approach</button>
+                        <div class="text-end">
+                            <button class="btn btn-primary approach-button" data-bs-toggle="modal" data-bs-target="#approachModal">Approach</button>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Startup Card 2 -->
+            
             <div class="col-md-6">
                 <div class="card mb-4">
-                    <img src="path/to/image2.jpg" class="card-img-top" alt="Healthify">
                     <div class="card-body text-left">
                         <h2 class="card-title">Healthify</h2>
-                        <p class="card-text"><strong>What we are solving:</strong> A health platform connecting users with nutritionists.</p>
+                        <p><strong>What we are solving:</strong></p> 
+                        <div class="border p-3 mb-3">
+                            <p>A health platform connecting users with nutritionists.</p>
+                        </div>
                         <p class="card-text"><strong>Startup Website:</strong> <a href="http://healthify.com" target="_blank">healthify.com</a></p>
                         <p class="card-text"><strong>Industries:</strong> HealthTech</p>
                         <p class="card-text"><strong>Founder:</strong> Priya Sharma</p>
                         <p class="card-text"><strong>We need help in:</strong> App Development, Marketing</p>
-                        <p class="card-text"><strong>Collaboration:</ ```html
-                        </strong> Paid</p>
-                        <button class="btn btn-primary approach-button">Approach</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Startup Card 3 -->
-            <div class="col-md-6">
-                <div class="card mb-4">
-                    <img src="path/to/image3.jpg" class="card-img-top" alt="GreenTech Innovations">
-                    <div class="card-body text-left">
-                        <h2 class="card-title">GreenTech Innovations</h2>
-                        <p class="card-text"><strong>What we are solving:</strong> Sustainable energy solutions for homes and businesses.</p>
-                        <p class="card-text"><strong>Startup Website:</strong> <a href="http://greentechinnovations.com" target="_blank">greentechinnovations.com</a></p>
-                        <p class="card-text"><strong>Industries:</strong> CleanTech</p>
-                        <p class="card-text"><strong>Founder:</strong> Rajesh Kumar</p>
-                        <p class="card-text"><strong>We need help in:</strong> Research and Development, Funding</p>
-                        <p class="card-text"><strong>Collaboration:</strong> Equity</p>
-                        <button class="btn btn-primary approach-button">Approach</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Startup Card 4 -->
-            <div class="col-md-6">
-                <div class="card mb-4">
-                    <img src="path/to/image4.jpg" class="card-img-top" alt="TravelMate">
-                    <div class="card-body text-left">
-                        <h2 class="card-title">TravelMate</h2>
-                        <p class="card-text"><strong>What we are solving:</strong> A travel planning app that personalizes itineraries.</p>
-                        <p class="card-text"><strong>Startup Website:</strong> <a href="http://travelmate.com" target="_blank">travelmate.com</a></p>
-                        <p class="card-text"><strong>Industries:</strong> TravelTech</p>
-                        <p class="card-text"><strong>Founder:</strong> Sneha Gupta</p>
-                        <p class="card-text"><strong>We need help in:</strong> User Experience Design, Marketing</p>
-                        <p class="card-text"><strong>Collaboration:</strong> Unpaid</p>
-                        <button class="btn btn-primary approach-button">Approach</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Startup Card 5 -->
-            <div class="col-md-6">
-                <div class="card mb-4">
-                    <img src="path/to/image5.jpg" class="card-img-top" alt="FinWise">
-                    <div class="card-body text-left">
-                        <h2 class="card-title">FinWise</h2>
-                        <p class="card-text"><strong>What we are solving:</strong> Financial literacy platform for young adults.</p>
-                        <p class="card-text"><strong>Startup Website:</strong> <a href="http://finwise.com" target="_blank">finwise.com</a></p>
-                        <p class="card-text"><strong>Industries:</strong> FinTech</p>
-                        <p class="card-text"><strong>Founder:</strong> Anil Verma</p>
-                        <p class="card-text"><strong>We need help in:</strong> Content Creation, Social Media Management</p>
                         <p class="card-text"><strong>Collaboration:</strong> Paid</p>
-                        <button class="btn btn-primary approach-button">Approach</button>
+                        <div class="text-end">
+                            <button class="btn btn-primary approach-button" data-bs-toggle="modal" data-bs-target="#approachModal">Approach</button>
+                        </div>
                     </div>
+                </div>
+            </div>
+
+            
+
+        </div>
+    </div>
+
+    
+    <div class="modal fade" id="approachModal" tabindex="-1" aria-labelledby="approachModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="approachModalLabel">Your Interest</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label for="reason" class="form-label">Why do you want to be part of this startup?</label>
+                    <textarea id="reason" class="form-control" rows="3"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="submitReason">Submit</button>
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap /4.5.2/js/bootstrap.min.js"></script>
-    <script src="js/dashboard.js"></script> <!-- Link to your custom JavaScript file -->
+
+    
+    <footer class="bg-dark text-light text-center py-3">
+        <i class="fas fa-adjust" id="toggleMode" style="cursor: pointer;"></i>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
+     
 </body>
 </html>
