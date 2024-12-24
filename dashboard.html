@@ -3,125 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> 
-     
-    <title>Startup Dashboard</title>
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/dashboard.css" rel="stylesheet">
 </head>
-<body class="d-flex flex-column min-vh-100"> 
-    
-    <nav class="navbar navbar-expand-lg navbar-light glassy-header fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Startup Dashboard</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" id="notification-icon" title="Complete your profile">
-                            <i class="fas fa-bell"></i> <span class="badge bg-danger">3</span> Complete Profile
-                        </a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fas fa-user-circle"></i>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
-                            <li id="user-info">
-                                <strong>John Doe</strong><br>
-                                <small>johndoe@example.com</small>
-                            </li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Edit Profile</a></li>
-                            <li><a class="dropdown-item text-danger" href="#">Sign Out</a></li> 
+<body>
+    <header class="header shadow-sm">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <!-- Logo and Company Name -->
+                <div class="d-flex align-items-center">
+                    <div class="navbar-brand d-flex align-items-center">
+                        <svg class="logo-icon me-2" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                            <path d="M9 18V6"></path>
+                        </svg>
+                        <span class="fw-bold">startupedia</span>
+                    </div>
+                    <button class="btn btn-primary ms-4">Idea Validation</button>
+                </div>
+
+                <!-- Right Side Icons -->
+                <div class="d-flex align-items-center">
+                    <!-- Notifications -->
+                    <div class="dropdown me-3">
+                        <button class="btn btn-icon position-relative" id="notificationDropdown" data-bs-toggle="dropdown">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path>
+                                <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path>
+                            </svg>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                2
+                            </span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end notification-dropdown">
+                            <li><a class="dropdown-item" href="#">New feature released!</a></li>
+                            <li><a class="dropdown-item" href="#">Welcome to the platform</a></li>
                         </ul>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <button class="btn btn-outline-dark" id="ideaValidationBtn">Idea Validation</button>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+                    </div>
 
-    <div class="container flex-grow-1" style="margin-top: 80px;"> 
-        <h1 class="text-center my-4">Startup Dashboard</h1>
-        <div class="row">
-            
-            <div class="col-md-6">
-                <div class="card mb-4">
-                    <div class="card-body text-left">
-                        <h2 class="card-title">EduBridge</h2>
-                        <p><strong>What we are solving:</strong></p> 
-                        <div class="border p-3 mb-3">
-                            <p>We are a platform to bridge the gap between the startup and students.</p>
-                        </div>
-                        <p class="card-text"><strong>Startup Website:</strong> <a href="http://edubridge.com" target="_blank">edubridge.com</a></p>
-                        <p class="card-text"><strong>Industries:</strong> EduTech</p>
-                        <p class="card-text"><strong>Founder:</strong> Abhishek Pawar</p>
-                        <p class="card-text"><strong>We need help in:</strong> Business Management, Website Making, Digital Marketing</p>
-                        <p class="card-text"><strong>Collaboration:</strong> Unpaid</p>
-                        <div class="text-end">
-                            <button class="btn btn-primary approach-button" data-bs-toggle="modal" data-bs-target="#approachModal">Approach</button>
-                        </div>
+                    <!-- Profile -->
+                    <div class="dropdown">
+                        <button class="btn btn-icon" id="profileDropdown" data-bs-toggle="dropdown">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end profile-dropdown">
+                            <li class="px-3 py-2 border-bottom">
+                                <div class="fw-medium">John Doe</div>
+                                <div class="small text-muted">john@example.com</div>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Edit Profile</a></li>
+                            <li><a class="dropdown-item text-danger" href="#">Sign Out</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
+        </nav>
+    </header>
 
-            
-            <div class="col-md-6">
-                <div class="card mb-4">
-                    <div class="card-body text-left">
-                        <h2 class="card-title">Healthify</h2>
-                        <p><strong>What we are solving:</strong></p> 
-                        <div class="border p-3 mb-3">
-                            <p>A health platform connecting users with nutritionists.</p>
-                        </div>
-                        <p class="card-text"><strong>Startup Website:</strong> <a href="http://healthify.com" target="_blank">healthify.com</a></p>
-                        <p class="card-text"><strong>Industries:</strong> HealthTech</p>
-                        <p class="card-text"><strong>Founder:</strong> Priya Sharma</p>
-                        <p class="card-text"><strong>We need help in:</strong> App Development, Marketing</p>
-                        <p class="card-text"><strong>Collaboration:</strong> Paid</p>
-                        <div class="text-end">
-                            <button class="btn btn-primary approach-button" data-bs-toggle="modal" data-bs-target="#approachModal">Approach</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            
-
-        </div>
-    </div>
-
-    
-    <div class="modal fade" id="approachModal" tabindex="-1" aria-labelledby="approachModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="approachModalLabel">Your Interest</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <label for="reason" class="form-label">Why do you want to be part of this startup?</label>
-                    <textarea id="reason" class="form-control" rows="3"></textarea>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" id="submitReason">Submit</button>
-                </div>
+    <main class="container py-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1 class="h3 mb-0">Startup Listings</h1>
+            <div class="search-box">
+                <input type="text" class="form-control" placeholder="Search startups...">
             </div>
         </div>
-    </div>
 
-    
-    <footer class="bg-dark text-light text-center py-3">
-        <i class="fas fa-adjust" id="toggleMode" style="cursor: pointer;"></i>
-    </footer>
+        <!-- Startup Cards Container -->
+        <div class="row g-4">
+            <!-- Cards will be dynamically inserted here -->
+        </div>
+    </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
-     
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="js/dashboard.js"></script>
 </body>
 </html>
