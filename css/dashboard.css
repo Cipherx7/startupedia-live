@@ -1,72 +1,111 @@
-:root {
-    --primary: #2563eb;
-    --secondary: #3b82f6;
-    --dark: #1e293b;
-    --light: #f8fafc;
-}
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: system-ui, -apple-system, sans-serif;
-}
-
+/* Add some content for scrolling test */
 body {
-    background-color: #f8f9fa; /* Light mode */
-    transition: background-color 0.3s, color 0.3s;
+    min-height: 200vh;
+    background: linear-gradient(45deg, #f8f9fa, #e9ecef);
 }
 
-.glassy-header {
-    background-color: rgba(255, 255, 255, 0.8); /* Glassy effect with white background */
-    backdrop-filter: blur(10px); /* Blurring effect for glassy appearance */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Light border for more definition */
+/* Header specific styles */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0.75rem 0;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.navbar-dark .navbar-nav .nav-link {
-    color: rgba(255, 255, 255, 0.5);
+/* Logo Styles */
+.logo-icon {
+    color: #0d6efd;
 }
 
-.navbar-dark .navbar-nav .nav-link:hover {
-    color: #ffffff;
+/* Dropdown Styles */
+.profile-dropdown {
+    width: 240px;
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.card {
-    width: 400px; /* Set a fixed width for the cards */
-    margin: auto; /* Center the cards */
-    transition: background-color 0.3s, color 0.3s;
+.notification-dropdown {
+    width: 280px;
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.border {
-    border: 1px solid #ced4da; /* Light gray border */
-    border-radius: 5px; /* Rounded corners for the outline */
+/* Badge position adjustment */
+.badge {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
 }
 
-.modal-content {
-    background-color: white;
+/* Card Styles */
+.startup-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    border: 1px solid rgba(229, 231, 235, 0.5);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    height: 100%;
 }
 
-footer {
-    margin-top: auto; /* Push the footer to the bottom */
+.startup-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Dark Mode Styles (Amoled Black) */
-body.dark-mode {
-    background-color: #000000; /* Black for AMOLED */
-    color: #ffffff;
+.startup-info {
+    background-color: rgba(243, 244, 246, 0.3);
+    border-radius: 8px;
+    padding: 0.75rem;
 }
 
-body.dark-mode .glass-header {
-    background-color: rgba(20, 20, 20, 0.9); /* Dark header in dark mode */
-    backdrop-filter: blur(10px);
+.startup-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    background-color: rgba(79, 70, 229, 0.1);
+    color: #4F46E5;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
-body.dark-mode .card {
-    background-color: #1a1a1a; /* Darker card style for AMOLED */
-    color: #ffffff;
+.approach-btn {
+    background-color: #4F46E5;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    border: none;
+    transition: background-color 0.2s ease;
 }
 
-body.dark-mode .modal-content {
-    background-color: #1a1a1a; /* Dark mode for modal */
-    color: #ffffff;
+.approach-btn:hover {
+    background-color: #4338CA;
+}
+/* Icon Button Styles */
+.btn-icon {
+    padding: 0.5rem;
+    line-height: 1;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    color: #6c757d;
+    transition: background-color 0.2s ease;
+}
+
+.btn-icon:hover {
+    background-color: rgba(248, 249, 250, 0.8);
 }
