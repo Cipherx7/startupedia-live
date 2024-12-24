@@ -106,6 +106,33 @@ body {
     transition: background-color 0.2s ease;
 }
 
+
+
 .btn-icon:hover {
     background-color: rgba(248, 249, 250, 0.8);
 }
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #000000; /* Black for AMOLED */
+    color: #ffffff;
+}
+
+body.dark-mode .glassy-header {
+    background: rgba(20, 20, 20, 0.8); /* Glassy black header in dark mode */
+    backdrop-filter: blur(8px); /* Blurring effect for glassy appearance */
+}
+
+/* Update input styles for dark mode */
+body.dark-mode .form-control, 
+body.dark-mode .form-select {
+    background-color: #343a40; /* Darker background for inputs */
+    color: #ffffff; /* Light text for inputs */
+    border: 1px solid #495057; /* Dark border for inputs */
+}
+
+body.dark-mode .form-control::placeholder, 
+body.dark-mode .form-select::placeholder {
+    color: #ced4da; /* Placeholder color */
+}
+
