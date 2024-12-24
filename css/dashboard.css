@@ -53,6 +53,8 @@ body {
     text-align: center;
 }
 
+/* CSS for Startup Dashboard */
+
 .container {
     width: 80%;
     margin: auto;
@@ -72,6 +74,8 @@ body {
     margin: 10px;
     width: 300px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative; /* For positioning the button */
+    text-align: left; /* Left-align text */
 }
 
 .card img {
@@ -87,9 +91,26 @@ body {
     font-size: 1em;
 }
 
+.approach-button {
+    position: absolute; /* Positioning the button */
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    padding: 10px 15px;
+    background-color: #007BFF; /* Button color */
+    color: white; /* Text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.approach-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
 footer {
     background-color: var(--dark);
     color: white;
     padding: 1rem;
     text-align: center;
 }
+
