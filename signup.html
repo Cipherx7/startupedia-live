@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - StartupMatch</title>
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">StartupMatch</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#how-it-works">How it Works</a>
+        </div>
+    </nav>
+
+    <div class="signup-container">
+        <div class="signup-card">
+            <h2>Create Your Account</h2>
+            <form action="php/signup.php" method="POST">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="primary-button">Sign Up</button>
+            </form>
+            <p class="login-prompt">
+                Already have an account? <a href="login.html" class="login-link">Log In</a>
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 StartupMatch. All rights reserved.</p>
+    </footer>
+</body>
+</html>
