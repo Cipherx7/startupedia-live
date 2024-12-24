@@ -193,3 +193,24 @@ footer {
     text-align: center;
     margin-top: 4rem;
 }
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-nav {
+    margin-bottom: 15px;
+}
+
+.footer-nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
