@@ -13,104 +13,60 @@
 }
 
 body {
-    background-color: var(--light);
-    color: var(--dark);
+    background-color: #f8f9fa; /* Light mode */
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.dashboard-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.glassy-header {
+    background-color: rgba(255, 255, 255, 0.8); /* Glassy effect with white background */
+    backdrop-filter: blur(10px); /* Blurring effect for glassy appearance */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Light border for more definition */
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--primary);
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.5);
 }
 
-.profile {
-    position: relative;
-}
-
-.profile-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%; /* Makes the icon circular */
-    cursor: pointer;
-    transition: box-shadow 0.3s;
-}
-
-.profile-icon:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.dashboard-content {
-    padding: 2rem;
-    text-align: center;
-}
-
-/* CSS for Startup Dashboard */
-
-.container {
-    width: 80%;
-    margin: auto;
-    text-align: center;
-}
-
-.startup-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #ffffff;
 }
 
 .card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 10px;
-    width: 300px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: relative; /* For positioning the button */
-    text-align: left; /* Left-align text */
+    width: 400px; /* Set a fixed width for the cards */
+    margin: auto; /* Center the cards */
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.card img {
-    max-width: 100%;
-    border-radius: 8px;
+.border {
+    border: 1px solid #ced4da; /* Light gray border */
+    border-radius: 5px; /* Rounded corners for the outline */
 }
 
-.card h2 {
-    font-size: 1.5em;
-}
-
-.card p {
-    font-size: 1em;
-}
-
-.approach-button {
-    position: absolute; /* Positioning the button */
-    bottom: 20px; /* Distance from the bottom */
-    right: 20px; /* Distance from the right */
-    padding: 10px 15px;
-    background-color: #007BFF; /* Button color */
-    color: white; /* Text color */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.approach-button:hover {
-    background-color: #0056b3; /* Darker shade on hover */
+.modal-content {
+    background-color: white;
 }
 
 footer {
-    background-color: var(--dark);
-    color: white;
-    padding: 1rem;
-    text-align: center;
+    margin-top: auto; /* Push the footer to the bottom */
 }
 
+/* Dark Mode Styles (Amoled Black) */
+body.dark-mode {
+    background-color: #000000; /* Black for AMOLED */
+    color: #ffffff;
+}
+
+body.dark-mode .glass-header {
+    background-color: rgba(20, 20, 20, 0.9); /* Dark header in dark mode */
+    backdrop-filter: blur(10px);
+}
+
+body.dark-mode .card {
+    background-color: #1a1a1a; /* Darker card style for AMOLED */
+    color: #ffffff;
+}
+
+body.dark-mode .modal-content {
+    background-color: #1a1a1a; /* Dark mode for modal */
+    color: #ffffff;
+}
