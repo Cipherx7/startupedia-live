@@ -73,9 +73,94 @@
         </div>
 
         <!-- Startup Cards Container -->
-        <div class="row g-4">
-            <!-- Cards will be dynamically inserted here -->
+          <div class="row">
+            
+            <div class="col-md-6">
+                <div class="card mb-4 startup-card"> 
+                    <div class="card-body text-left">
+                        <h2 class="card-title fw-bold">EduBridge</h2>
+                        <p><strong>What we are solving:</strong></p> 
+                        <div class="border p-3 mb-3">
+                            <p>We are a platform to bridge the gap between the startup and students.</p>
+                        </div>
+                        <p class="card-text"><strong>Startup Website:</strong> <a href="http://edubridge.com" target="_blank">edubridge.com</a></p>
+                        <p class="card-text"><strong>Industries:</strong> EduTech</p>
+                        <p class="card-text"><strong>Founder:</strong> Abhishek Pawar</p>
+                        <p class="card-text"><strong>We need help in:</strong> Business Management, Website Making, Digital Marketing</p>
+                        <p class="card-text"><strong>Collaboration:</strong> Unpaid</p>
+                        <div class="text-end">
+                            <button class="btn approach-btn" data-bs-toggle="modal" data-bs-target="#approachModal">Approach</button> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-md-6">
+                <div class="card mb-4 startup-card"> 
+                    <div class="card-body text-left">
+                        <h2 class="card-title fw-bold">Healthify</h2>
+                        <p><strong>What we are solving:</strong></p> 
+                        <div class="border p-3 mb-3">
+                            <p>A health platform connecting users with nutritionists.</p>
+                        </div>
+                        <p class="card-text"><strong>Startup Website:</strong> <a href="http://healthify.com" target="_blank">healthify.com</a></p>
+                        <p class="card-text"><strong>Industries:</strong> HealthTech</p>
+                        <p class="card-text"><strong>Founder:</strong> Priya Sharma</p>
+                        <p class="card-text"><strong>We need help in:</strong> App Development, Marketing</p>
+                        <p class="card-text"><strong>Collaboration:</strong> Paid</p>
+                        <div class="text-end">
+                            <button class="btn approach-btn" data-bs-toggle="modal" data-bs-target="#approachModal">Approach</button> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
         </div>
+    </div>
+
+    
+    <div class="modal fade" id="createStartupModal" tabindex="-1" aria-labelledby="createStartupModalLabel" aria-hidden="true">
+        </div>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="createStartupModalLabel">Create Startup</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="createStartupForm">
+                        <div class="mb-3">
+                            <label for="startupName" class="form-label">Startup Name</label>
+                            <input type="text" class="form-control" id="startupName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="solvingProblem" class="form-label">What are you solving?</label>
+                            <textarea class="form-control" id="solvingProblem" rows="3" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="startupWebsite" class="form-label">Startup Website</label>
+                            <input type="url" class="form-control" id="startupWebsite" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="startupIndustry" class="form-label">Industry</label>
+                            <input type="text" class="form-control" id="startupIndustry" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="founder" class="form-label">Founder</label>
+                            <input type="text" class="form-control" id="founder" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="helpNeeded" class="form-label">We need help in:</label>
+                            <textarea class="form-control" id="helpNeeded" rows="2"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="collaboration" class="form-label">Collaboration Type</label>
+                            <input type="text" class="form-control" id="collaboration" required>
+                        </div>
+                    </form>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></html>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
