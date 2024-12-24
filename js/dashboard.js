@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    document.getElementById('toggleMode').addEventListener('click', function () {
+  document.getElementById('toggleMode').addEventListener('click', function () {
     document.body.classList.toggle('dark-mode');
 });
 
@@ -105,3 +105,5 @@ document.getElementById('submitStartup').addEventListener('click', function() {
     modalInstance.hide();
 });
 
+// Display all dashboard loaded message
+console.log("Dashboard Loaded");
