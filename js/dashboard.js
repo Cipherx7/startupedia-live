@@ -1,7 +1,7 @@
 // Import components and utilities
-import { startups } from 'startups.js';
-import { createStartupCard } from 'startupCard.js';
-import { searchStartups } from 'search.js';
+import { startups } from './startups.js';
+import { createStartupCard } from './startupCard.js';
+import { searchStartups } from './search.js';
 
 document.addEventListener('DOMContentLoaded', function() {
     const startupContainer = document.querySelector('.row.g-4');
